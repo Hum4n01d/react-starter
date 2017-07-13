@@ -1,5 +1,5 @@
 const { resolve } = require('path')
-const webpack = require('webpack')
+const {HotModuleReplacementPlugin, NamedModulesPlugin, DefinePlugin}  = require('webpack')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
@@ -16,8 +16,8 @@ const entry = isDev ? [
 ] : './index.js'
 
 const devPlugins = isDev ? [
-  new webpack.HotModuleReplacementPlugin(), // enable HMR globally
-  new webpack.NamedModulesPlugin() // prints more readable module names in the browser console on HMR updates
+  new HotModuleReplacementPlugin(), // enable HMR globally
+  new NamedModulesPlugin() // prints more readable module names in the browser console on HMR updates
 ] : undefined
 
 module.exports = {
@@ -48,7 +48,7 @@ module.exports = {
       inject: true,
       template: resolve(__dirname, 'src/index.html')
     }),
-    new webpack.DefinePlugin({
+    new DefinePlugin({
       'environment': '"production"',
       NODE_ENV: JSON.stringify('production')
     })
