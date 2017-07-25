@@ -8,7 +8,7 @@ const Body = styled.div`
 `
 
 export default props => (
-  <SectionWrapper>
+  <SectionWrapper body>
     <Body>
       {props.children}
     </Body>

@@ -5,6 +5,11 @@ import SectionWrapper from './SectionWrapper'
 
 const Footer = styled.div`
   text-align: center;
+  padding: 10px;
+
+  p {
+    margin: 0;
+  }
 `
 
 export default props => (

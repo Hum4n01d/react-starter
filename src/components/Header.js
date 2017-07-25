@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import SectionWrapper from './SectionWrapper'
 
 const Header = styled.header`
-  padding: 10px 0;
+  padding: 20px 0;
 
   h1 {
     margin-right: auto;
@@ -14,7 +14,7 @@ const Header = styled.header`
       text-decoration: none;
     }
   }
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 0px) {
     display: flex;
     align-items: center;
     
