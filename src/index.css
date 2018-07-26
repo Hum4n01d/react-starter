@@ -1,0 +1,32 @@
+body {
+  font-family: 'Roboto';
+  padding: 50px;
+  background-color: royalblue;
+  color: white;
+}
+
+#root {
+  height: 100vh;
+  text-align: center;
+}
+
+#root p {
+  font-size: 3em;
+}
+
+button {
+  background: pink;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 2em;
+}
+
+button:active {
+  background: #be8891;
+}
+
+button:focus {
+  outline: none;
+  cursor: pointer;
+}

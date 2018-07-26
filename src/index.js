@@ -1,13 +1,14 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
 
-import Router from './router'
+import 'modern-normalize'
+import './index.css'
 
-ReactDOM.render(
-  <Router />,
+import App from './components/App'
+
+const adjectives = ['awesome', 'cool', 'amazing', 'terrific', 'great', 'nice', 'good', 'superb', 'fantastic']
+
+render(
+  <App adjectives={adjectives} />,
   document.getElementById('root')
 )
-
-if (module.hot) {
-  module.hot.accept()
-}

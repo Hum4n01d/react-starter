@@ -1,31 +1,43 @@
 {
   "name": "react-starter",
   "version": "1.0.0",
-  "description": "A template or boilerplate for React projects with Webpack, ES2015, JSX, Hot Reloading, and Styled Components",
+  "description": "A template for React projects",
   "main": "src/index.js",
   "author": "Hum4n01d <hum4n01d@icloud.com>",
-  "license": "MIT",
+  "license": "ISC",
   "scripts": {
-    "start": "webpack-dev-server --progress",
-    "build": "NODE_ENV=production webpack -p --progress --hide-modules"
+    "start": "webpack-dev-server --mode development"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hum4n01d/react-starter.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Hum4n01d/react-starter/issues"
+  },
+  "homepage": "https://github.com/Hum4n01d/react-starter#readme",
   "dependencies": {
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-hot-loader": "next",
-    "react-router-dom": "^4.1.1",
-    "react-router-transition": "^0.0.6",
-    "styled-components": "^2.1.0",
-    "styled-normalize": "^2.2.1"
+    "modern-normalize": "^0.5.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-hot-loader": "^4.3.4"
   },
   "devDependencies": {
-    "babel-core": "^6.25.0",
-    "babel-loader": "^7.1.1",
-    "html-webpack-plugin": "^2.28.0",
-    "webpack": "^2.4.1",
-    "webpack-bundle-analyzer": "^2.8.2",
-    "webpack-dev-server": "^2.4.3",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1"
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.2.0",
+    "eslint-loader": "^2.1.0",
+    "eslint-plugin-react": "^7.10.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.16.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
   }
 }
