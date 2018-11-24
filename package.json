@@ -8,15 +8,6 @@
   "scripts": {
     "start": "webpack-dev-server --mode development"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Hum4n01d/react-starter.git"
-  },
-  "keywords": [],
-  "bugs": {
-    "url": "https://github.com/Hum4n01d/react-starter/issues"
-  },
-  "homepage": "https://github.com/Hum4n01d/react-starter#readme",
   "dependencies": {
     "modern-normalize": "^0.5.0",
     "prop-types": "^15.6.2",
