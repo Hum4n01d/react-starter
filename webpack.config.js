@@ -1,13 +1,19 @@
 const path = require('path')
-const HtmlWebPackPlugin = require('html-webpack-plugin')
-const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
+  },
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    port: 5000,
-    hot: true,
+    hot: true
+  },
+  resolve: {
+    alias: {
+      'react-dom': '@hot-loader/react-dom'
+    }
   },
   module: {
     rules: [
@@ -15,22 +21,12 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: 'babel-loader'
-      },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader']
-      },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
       }
     ]
   },
   plugins: [
-    new HtmlWebPackPlugin({
+    new HtmlWebpackPlugin({
       template: './src/index.html'
-    }),
-    new webpack.HotModuleReplacementPlugin()
+    })
   ]
 }

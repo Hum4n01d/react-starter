@@ -1,34 +1,40 @@
 {
   "name": "react-starter",
   "version": "1.0.0",
-  "description": "A template for React projects",
-  "main": "src/index.js",
-  "author": "Hum4n01d <hum4n01d@icloud.com>",
-  "license": "ISC",
+  "description": "A template for developing React apps",
+  "main": "./src/index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development"
+    "start": "webpack-dev-server",
+    "build": "webpack --mode production"
+  },
+  "browserslist": "defaults",
+  "author": "Hum4n01d <hum4n01d@icloud.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.1.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-standard": "^4.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {
-    "modern-normalize": "^0.5.0",
-    "prop-types": "^15.6.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-hot-loader": "^4.3.4"
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^8.2.6",
-    "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "css-loader": "^1.0.0",
-    "eslint": "^5.2.0",
-    "eslint-loader": "^2.1.0",
-    "eslint-plugin-react": "^7.10.0",
-    "html-webpack-plugin": "^3.2.0",
-    "style-loader": "^0.21.0",
-    "webpack": "^4.16.2",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5"
+    "@hot-loader/react-dom": "^16.9.0",
+    "core-js": "^3.2.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-hot-loader": "^4.12.11",
+    "regenerator-runtime": "^0.13.3",
+    "styled-components": "^4.3.2",
+    "styled-normalize": "^8.0.6"
   }
 }

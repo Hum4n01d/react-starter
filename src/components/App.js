@@ -1,40 +1,39 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { hot } from 'react-hot-loader'
+import React, { useState, useEffect } from 'react'
+import styled from 'styled-components'
 
-class App extends Component {
-  constructor(props) {
-    super(props)
+import Text from './Text'
+import Greeting from './Greeting'
 
-    this.regenerate = this.regenerate.bind(this)
-    this.getRandomAdjective = this.getRandomAdjective.bind(this)
+const AppContainer = styled.div`
+  background-color: dodgerblue;
+  padding: 50px;
+  height: 100%;
+`
 
-    this.state = {
-      adjective: this.getRandomAdjective()
+const App = () => {
+  const [joke, setJoke] = useState('')
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const resp = await fetch('https://icanhazdadjoke.com/', {
+        headers: {
+          Accept: 'application/json'
+        }
+      })
+      const { joke } = await resp.json()
+
+      setJoke(joke)
     }
-  }
-  getRandomAdjective() {
-    return this.props.adjectives[Math.floor(Math.random() * this.props.adjectives.length)]
-  }
-  regenerate() {
-    const adjective = this.getRandomAdjective()
 
-    this.setState({
-      adjective
-    })
-  }
-  render() {
-    return (
-      <div>
-        <p>React is { this.state.adjective }</p>
-        <button onClick={this.regenerate}>Regenerate</button>
-      </div>
-    )
-  }
+    fetchData()
+  }, [])
+
+  return (
+    <AppContainer>
+      <Greeting name='User' />
+      <Text>Random dad joke: {joke || 'Loading...'}</Text>
+    </AppContainer>
+  )
 }
 
-App.propTypes = {
-  adjectives: PropTypes.arrayOf(PropTypes.string).isRequired
-}
-
-export default hot(module)(App)
+export default App
